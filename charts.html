@@ -1,0 +1,91 @@
+<div class="charts">
+    <div>
+        <div class="graph-top-container">
+            <div class="dropdown inline-block">
+                <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownFirstChart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Week</span>
+                    <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                        <g>
+                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#596283"/>
+                        </g>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownFirstChart">
+                    <li><a href="#" onclick="getFirstChartData('week')">Week</a></li>
+                    <li><a href="#" onclick="getFirstChartData('year')">Year</a></li>
+                </ul>
+            </div>
+            <div class="dropdown inline-block">
+                <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownRoom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Room</span>
+                    <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                        <g>
+                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#596283"/>
+                        </g>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownRoom">
+                    <li><a href="#" onclick="">Room 1</a></li>
+                    <li><a href="#" onclick="">Room 2</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="graph-container">
+            <h2 class="graph-title">Number of Events</h2>
+            <div id="bar-chart"></div>
+        </div>
+    </div>
+    <div>
+        <div class="graph-top-container">
+            <p id="loadingChartsText">Loading charts..</p>
+        </div>
+        <div class="graph-container">
+            <h2 class="graph-title">Mean Score and Duration</h2>
+            <div id="columnchart_values"></div>
+        </div>
+    </div>
+    <div>
+        <div class="graph-top-container text-right">
+            <div class="dropdown inline-block">
+                <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownThirdChart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Week</span>
+                    <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                        <g>
+                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#596283"/>
+                        </g>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownThirdChart">
+                    <li><a href="#" onclick="getThirdChartData('week', thirdChartAudioType, thirdChartDataType)">Week</a></li>
+                    <li><a href="#" onclick="getThirdChartData('month', thirdChartAudioType, thirdChartDataType)">Month</a></li>
+                </ul>
+            </div>
+            <div class="dropdown inline-block">
+                <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownTimeouts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Timeouts</span>
+                    <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                        <g>
+                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#596283"/>
+                        </g>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownTimeouts">
+                    <li><a href="#" onclick="getThirdChartData(thirdChartDateRange, 'all', thirdChartDataType)">All</a></li>
+                    <li><a href="#" onclick="getThirdChartData(thirdChartDateRange, 'timeout', thirdChartDataType)">Timeout</a></li>
+                    <li><a href="#" onclick="getThirdChartData(thirdChartDateRange, 'closing_timeout', thirdChartDataType)">Closing Timeout</a></li>
+                    <li><a href="#" onclick="getThirdChartData(thirdChartDateRange, 'briefing', thirdChartDataType)">Briefing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="graph-container">
+            <h2 class="graph-title">Individual Event Score</h2>
+            <div class="text-center">
+                <div class="btn-group" role="group" id="thirdChartDataType">
+                    <button type="button" class="btn btn-default btn-sm active" id="data_time" onclick="getThirdChartData(thirdChartDateRange, thirdChartAudioType, 'time')">Timeout</button>
+                    <button type="button" class="btn btn-default btn-sm" id="data_score" onclick="getThirdChartData(thirdChartDateRange, thirdChartAudioType, 'score')">Closing Timeout</button>
+                </div>
+            </div>
+            <div id="scatter-plot"></div>
+        </div>
+    </div>
+</div>
